@@ -57,6 +57,23 @@ python scripts/inference.py \
   --scale 5
 ```
 
+## Training MUNet
+
+To train a new MUNet model on a dataset like BraTS2020 or BraTS2018, you can use the `main.py` script. Below is an example of how to run the training process:
+
+```bash
+python -u main.py \
+  --logdir models/MUNet \
+  --pretrained_model pretrained_models/munet-base.ckpt \
+  --base configs/v1.yaml \
+  --scale_lr False \
+  --train_data /path/to/train_data \
+  --val_data /path/to/val_data \
+  --batch_size 16 \
+  --epochs 100 \
+  --learning_rate 1e-4 \
+  --optimizer Adam \
+  --early_stopping True
 
 
 ## Reuslts
