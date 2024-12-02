@@ -1,0 +1,86 @@
+hardware:
+  processor: 
+    model: Intel Xeon Gold 6226R
+    cores: 16
+    threads: 32
+    base_frequency: 2.9 GHz
+    boost_frequency: 3.4 GHz
+  gpu: 
+    model: NVIDIA Tesla V100
+    memory: 32GB
+  memory:
+    type: DDR4
+    size: 128GB
+  storage:
+    type: NVMe SSD
+    size: 1TB
+  operating_system: Ubuntu 20.04 LTS
+
+software:
+  deep_learning_framework: 
+    name: PyTorch
+    version: 1.10
+  cuda:
+    version: 11.4
+  cudnn:
+    version: 8.2
+  programming_language:
+    name: Python
+    version: 3.8
+  scientific_libraries:
+    numpy:
+      version: 1.21
+    scipy:
+      version: 1.7
+    pandas:
+      version: 1.3
+    matplotlib:
+      version: 3.4
+  image_processing:
+    opencv:
+      version: 4.5
+  data_analysis:
+    scikit_learn:
+      version: 0.24
+  environment_management:
+    tool: Conda
+    purpose: "To manage software dependencies and ensure reproducibility"
+
+dependencies:
+  pytorch:
+    version: 1.10
+  cuda_toolkit:
+    version: 11.4
+  cudnn:
+    version: 8.2
+  python:
+    version: 3.8
+  numpy:
+    version: 1.21
+  scipy:
+    version: 1.7
+  pandas:
+    version: 1.3
+  matplotlib:
+    version: 3.4
+  opencv:
+    version: 4.5
+  scikit_learn:
+    version: 0.24
+  conda:
+    version: "latest"
+  pip:
+    version: 20.3
+  additional_libraries:
+    - albumentations==0.4.3
+    - diffusers
+    - bezier
+    - imageio==2.9.0
+    - imageio-ffmpeg==0.4.2
+    - pytorch-lightning==1.4.2
+    - omegaconf==2.1.1
+    - transformers==4.19.2
+    - torchmetrics==0.6.0
+    - kornia==0.6
+    - -e git+https://github.com/CompVis/taming-transformers.git@master#egg=taming-transformers
+    - -e git+https://github.com/openai/CLIP.git@main#egg=clip
