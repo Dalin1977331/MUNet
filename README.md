@@ -18,6 +18,7 @@ You can create a Conda environment named `MUNet` by running the following comman
 
 ```bash
 conda env create -f environment.yaml
+conda activate MUNet
 
 
 
