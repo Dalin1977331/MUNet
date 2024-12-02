@@ -36,6 +36,27 @@ The following datasets are used for training, validation, and evaluation of the 
    - **Link**: [LGG Segmentation Dataset on Kaggle](https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation)
 
 
+## Testing
+
+To test and sample from our trained model, you can use the `inference.py` script. This script allows you to generate predictions on input images by passing through a set of configuration options, model checkpoint, and necessary input data.
+
+### 1. Running Inference
+
+To run inference on a test image, use the following command:
+
+```bash
+python scripts/inference.py \
+  --plms \
+  --outdir results \
+  --config configs/v1.yaml \
+  --ckpt checkpoints/model.ckpt \
+  --image_path examples/image/example_1.png \
+  --mask_path examples/mask/example_1.png \
+  --reference_path examples/reference/example_1.jpg \
+  --seed 321 \
+  --scale 5
+
+
 
 
 ## Reuslts
