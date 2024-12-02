@@ -55,7 +55,7 @@ python scripts/inference.py \
   --reference_path examples/reference/example_1.jpg \
   --seed 321 \
   --scale 5
-
+```
 
 
 
