@@ -24,7 +24,7 @@ conda activate MUNet
 ## Reuslts
 
 
-![](Figure/figure2.jpg)  
+![](Figure/figure2.png)  
 
 
 
