@@ -19,6 +19,28 @@ You can create a Conda environment named `MUNet` by running the following comman
 conda env create -f environment.yaml
 conda activate MUNet
 ```
+## Data Availability
+
+The following datasets are used for training, validation, and evaluation of the MUNet model. These datasets provide various medical imaging data, particularly for brain tumor segmentation, and can be accessed via Kaggle.
+
+1. **BraTS2020 Dataset (Training & Validation)**
+   - **Description**: The BraTS2020 dataset contains MRI scans for brain tumor segmentation. It includes both low-grade and high-grade gliomas with multimodal imaging (T1, T2, FLAIR, and post-contrast T1 images). The dataset is used for evaluating the performance of segmentation models in terms of tumor region delineation.
+   - **Link**: [BraTS2020 Dataset on Kaggle](https://www.kaggle.com/datasets/awsaf49/brats20-dataset-training-validation)
+
+2. **BraTS2018 Dataset**
+   - **Description**: The BraTS2018 dataset provides additional MRI scan data with tumor regions labeled for segmentation. It consists of high-resolution MRI images with corresponding ground truth labels for tumor regions (enhancing tumor, whole tumor, and tumor core) to evaluate segmentation algorithms.
+   - **Link**: [BraTS2018 Dataset on Kaggle](https://www.kaggle.com/datasets/anassbenfares/brats2018)
+
+3. **LGG Segmentation Dataset**
+   - **Description**: This dataset focuses on Low-Grade Glioma (LGG) MRI scans, a specific type of brain tumor. The dataset includes MRI scans with detailed segmentations, which are used to evaluate segmentation performance in low-grade glioma detection and analysis.
+   - **Link**: [LGG Segmentation Dataset on Kaggle](https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation)
+
+4. **LGG Segmentation Dataset (Alternative Source)**
+   - **Description**: Another LGG dataset containing MRI images, focusing on the segmentation of low-grade gliomas. The dataset includes high-quality scans and is useful for training models to handle a variety of brain tumor types, particularly in the context of LGG.
+   - **Link**: [LGG Segmentation Dataset (Alternative) on Kaggle](https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation)
+
+
+
 
 ## Reuslts
 
