@@ -23,9 +23,7 @@ conda activate MUNet
 
 ## Reuslts
 
-
-![r](Firesulture/figure2.png)
-
+![result](Figure/figure2.png)
 
 
 
