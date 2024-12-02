@@ -6,16 +6,21 @@ Brain tumors are one of the major health threats to humans, and their complex pa
 
 ![](Figure/figure%201.jpg)  
 
-## Requirements
+# Project Setup and Requirements
 
 To set up the environment for this project, follow the steps below:
 
-### 1. Create the Conda Environment
+## 1. Create the Conda Environment
 
-You can create a Conda environment named `MUNet` by running the following command:
+The first step is to create a Conda environment specifically for this project. This helps to ensure that the project dependencies are isolated and do not interfere with other Python projects or system-wide libraries.
+
+You can create a Conda environment named `MUNet` by running the following command in your terminal or command prompt:
 
 ```bash
 conda env create -f environment.yaml
+
+
+
 
 
 
