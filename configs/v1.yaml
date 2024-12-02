@@ -1,0 +1,90 @@
+training:
+  learning_rate: 1.0e-04
+  lr_scheduler:
+    target: torch.optim.lr_scheduler.CosineAnnealingLR
+    params:
+      T_max: 100
+      eta_min: 1e-6
+      last_epoch: -1
+  
+  optimizer:
+    target: torch.optim.AdamW
+    params:
+      lr: 1.0e-04
+      weight_decay: 1e-4
+      betas: [0.9, 0.999]
+      eps: 1e-8
+
+  loss:
+    target: torch.nn.ModuleList
+    params:
+      - target: torch.nn.CrossEntropyLoss
+        params:
+          ignore_index: 255
+      - target: torch.nn.BCEWithLogitsLoss
+        params: {}
+      - target: munet.losses.DiceLoss
+        params:
+          reduction: "mean"
+      - target: munet.losses.BoundaryLoss
+        params:
+          weight: 0.5
+      - target: munet.losses.mIoULoss
+        params:
+          reduction: "mean"
+
+  gradient_accumulation_steps: 4
+  batch_size: 16
+  warmup_steps: 5000
+  warmup_lr: 1e-7
+
+  weight_init:
+    target: munet.models.initializers.XavierInit
+    params:
+      gain: 1.0
+
+  use_betas: True
+
+  dropout_rate: 0.2
+  layer_norm: True
+
+  mixed_precision:
+    enabled: True
+    opt_level: "O1"
+    loss_scale: 128
+
+  early_stopping:
+    enabled: True
+    patience: 10
+
+  checkpointing:
+    save_best_only: True
+    monitor: val/dice_loss
+    mode: min
+    save_top_k: 1
+
+  data_augmentation:
+    enabled: True
+    transformations:
+      - target: munet.transforms.RandomRotation
+        params:
+          degrees: 15
+      - target: munet.transforms.RandomFlip
+        params:
+          axis: 'horizontal'
+      - target: munet.transforms.RandomZoom
+        params:
+          zoom_range: [0.9, 1.1]
+      - target: munet.transforms.RandomNoise
+        params:
+          noise_type: 'gaussian'
+
+  logging:
+    log_dir: "logs"
+    log_interval: 50
+    tensorboard: True
+
+  model_parallelism:
+    enabled: False
+    num_gpus: 1
+    device: "cuda"
