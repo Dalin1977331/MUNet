@@ -10,7 +10,6 @@ Brain tumors are one of the major health threats to humans, and their complex pa
 
 To set up the environment for this project, follow the steps below:
 
-## 1. Create the Conda Environment
 
 The first step is to create a Conda environment specifically for this project. This helps to ensure that the project dependencies are isolated and do not interfere with other Python projects or system-wide libraries.
 
