@@ -35,10 +35,6 @@ The following datasets are used for training, validation, and evaluation of the 
    - **Description**: This dataset focuses on Low-Grade Glioma (LGG) MRI scans, a specific type of brain tumor. The dataset includes MRI scans with detailed segmentations, which are used to evaluate segmentation performance in low-grade glioma detection and analysis.
    - **Link**: [LGG Segmentation Dataset on Kaggle](https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation)
 
-4. **LGG Segmentation Dataset (Alternative Source)**
-   - **Description**: Another LGG dataset containing MRI images, focusing on the segmentation of low-grade gliomas. The dataset includes high-quality scans and is useful for training models to handle a variety of brain tumor types, particularly in the context of LGG.
-   - **Link**: [LGG Segmentation Dataset (Alternative) on Kaggle](https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation)
-
 
 
 
