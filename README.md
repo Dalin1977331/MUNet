@@ -45,16 +45,15 @@ To test and sample from our trained model, you can use the `inference.py` script
 To run inference on a test image, use the following command:
 
 ```bash
-python scripts/inference.py \
-  --plms \
-  --outdir results \
-  --config configs/v1.yaml \
+python test.py \
   --ckpt checkpoints/model.ckpt \
-  --image_path examples/image/example_1.png \
-  --mask_path examples/mask/example_1.png \
-  --reference_path examples/reference/example_1.jpg \
-  --seed 321 \
-  --scale 5
+  --dataset data/test \
+  --outdir results \
+  --batch_size 16 \
+  --size 256 \
+  --threshold 0.5 \
+  --seed 123
+
 ```
 
 ## Training MUNet
@@ -62,18 +61,15 @@ python scripts/inference.py \
 To train a new MUNet model on a dataset like BraTS2020 or BraTS2018, you can use the `main.py` script. Below is an example of how to run the training process:
 
 ```bash
-python -u main.py \
-  --logdir models/MUNet \
-  --pretrained_model pretrained_models/munet-base.ckpt \
-  --base configs/v1.yaml \
-  --scale_lr False \
-  --train_data /path/to/train_data \
-  --val_data /path/to/val_data \
+python train.py \
+  --ckpt checkpoints/model.ckpt \
+  --dataset data/test \
+  --outdir results \
   --batch_size 16 \
-  --epochs 100 \
-  --learning_rate 1e-4 \
-  --optimizer Adam \
-  --early_stopping True
+  --size 256 \
+  --threshold 0.5 \
+  --seed 123
+
 ```
 
 ## Reuslts
