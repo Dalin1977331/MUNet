@@ -1,4 +1,4 @@
-# Coming Soon to Open Source: MUNet
+# MUNet
 
 ## OverView
 
